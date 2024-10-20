@@ -1,6 +1,7 @@
 import React from 'react'
-
+import { useAuth0 } from "@auth0/auth0-react";
 const Flex = () => {
+    const { loginWithRedirect, logout } = useAuth0();
 
     return (
         <>
@@ -9,8 +10,10 @@ const Flex = () => {
                 <div class="nav-links">
                     <a href="#">Home</a>
                     <a href="#">About</a>
-                    <a href="#">Services</a>
-                    <a href="#">Contact</a>
+                    <a href="#"> <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+                        Log Out
+                    </button></a>
+                    <a href="#"><button onClick={() => loginWithRedirect()}>Log In</button></a>
                 </div>
             </nav>
             <div class="container-flex-basis">
@@ -80,9 +83,9 @@ const Flex = () => {
                 <div className=' mx-auto w-20 h-1 absolute border-2 border-black'></div>
             </div> */}
             <div class="triangle-container">
-                <div class="triangle-side1"></div> 
-                <div class="triangle-side2"></div> 
-                <div class="triangle-side3"></div> 
+                <div class="triangle-side1"></div>
+                <div class="triangle-side2"></div>
+                <div class="triangle-side3"></div>
             </div>
         </>
     )
