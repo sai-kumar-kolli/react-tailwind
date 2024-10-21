@@ -1,8 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}"],
+  darkMode: "class",
+  content: ['./src/**/*.{js,jsx}'],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        lightcoral: '#f08080', // Custom light coral color
+      },
+    },
   },
   plugins: [],
 }
+
