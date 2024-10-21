@@ -393,8 +393,8 @@ const MainContent = () => {
                     Skip to Content
                 </a>
 
-                <div class="lg:flex lg:justify-between lg:gap-4 lg:items-start lg:min-h-[calc(100vh-64px)]">
-                    <section class="lg:w-1/4 lg:sticky lg:top-[64px] lg:h-[calc(100vh-64px)] lg:flex lg:flex-col lg:justify-center text-center lg:text-left">
+                <div class="lg:flex lg:justify-between lg:gap-4 lg:items-start lg:min-h-[calc(100vh-60px)]">
+                    <section class="lg:w-1/4 lg:sticky lg:top-[60px] lg:h-[calc(100vh-60px)] lg:flex lg:flex-col lg:justify-center text-center lg:text-left">
                         <div>
                             <h1 class="text-4xl font-extrabold tracking-tight text-gray-800 dark:text-gray-200 sm:text-5xl">
                                 <a href="/">Sai Kumar K</a>
@@ -423,7 +423,7 @@ const MainContent = () => {
                         </div>
                     </section>
 
-                    <section class="lg:w-1/4 lg:sticky lg:top-[64px] lg:h-[calc(100vh-64px)] lg:flex lg:flex-col lg:justify-center">
+                    <section class="lg:w-1/4 lg:sticky lg:top-[60px] lg:h-[calc(100vh-60px)] lg:flex lg:flex-col lg:justify-center">
                         <nav class="nav mt-10 lg:mt-0" aria-label="In-page jump links">
                             <ul class="space-y-6">
                                 <li>
@@ -448,7 +448,7 @@ const MainContent = () => {
                         </nav>
                     </section>
 
-                    <section class="lg:w-1/2 lg:h-[calc(100vh-64px)] lg:overflow-y-auto">
+                    <section class="lg:w-1/2 lg:h-[calc(100vh-60px)] lg:overflow-y-auto">
                         <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg transition-colors duration-300">
                             <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-200">Main Content Area</h3>
                             <p class="mt-4 text-gray-600 dark:text-gray-300">Dummy text Dummy text Dummy text Dummy text Dummy text Dummy text Dummy text Dummy text Dummy text Dummy text Dummy text Dummy text Dummy text Dummy text Dummy text Dummy text .</p>
