@@ -2,9 +2,29 @@ import React, { useState } from 'react';
 import DarkModeToggle from './Darkmodetoggle';
 import { FaBars, FaTimes, FaHome, FaBlog, FaBook, FaSignInAlt, FaSignOutAlt } from 'react-icons/fa';
 import FlyoutMenu from './FlyoutMenu';
+import { useAuth0 } from '@auth0/auth0-react';
 
-const Header = ({ isAuthenticated, handleLogin }) => {
+const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const { isAuthenticated, loginWithRedirect, logout } = useAuth0()
+
+
+    const handleLogin = async () => {
+        await loginWithRedirect(
+            // {
+            //     appState: {
+            //         returnTo: "/profile",
+            //     },
+            // }
+        );
+    };
+    const handleLogout = () => {
+        logout({
+            logoutParams: {
+                returnTo: window.location.origin,
+            },
+        });
+    }
 
     return (
         <nav className="flex justify-between items-center p-4 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition duration-300">
@@ -49,7 +69,7 @@ const Header = ({ isAuthenticated, handleLogin }) => {
                             <span>Login</span>
                         </div>
                     ) : (
-                        <div className="flex items-center space-x-2 hover:text-blue-400 cursor-pointer">
+                        <div className="flex items-center space-x-2 hover:text-blue-400 cursor-pointer" onClick={handleLogout}>
                             <FaSignOutAlt className=" dark:text-gray-100 text-gray-600" />
                             <span>Logout</span>
                         </div>
