@@ -3,7 +3,7 @@ import DarkModeToggle from './Darkmodetoggle';
 import { FaBars, FaTimes, FaHome, FaBlog, FaBook, FaSignInAlt, FaSignOutAlt } from 'react-icons/fa';
 import FlyoutMenu from './FlyoutMenu';
 import { useAuth0 } from '@auth0/auth0-react';
-
+import LogoSVG from '../assets/logo';
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const { isAuthenticated, loginWithRedirect, logout } = useAuth0()
@@ -42,7 +42,11 @@ const Header = () => {
                         )}
                     </button>
                 </div>
-                <div className="text-lg font-bold">Logo</div>
+                {/* <div className="text-lg font-bold"> */}
+                    <div className=" flex items-center justify-center">
+                        <LogoSVG />
+                    </div>
+                {/* </div> */}
                 <div className="hidden md:block">|</div>
             </div>
 
