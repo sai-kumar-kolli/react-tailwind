@@ -1,0 +1,53 @@
+.loader-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Ensure it's above other content */
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease;
+  }
+  
+  .loader-svg {
+    width: 100px;
+    height: 100px;
+    animation: zoom-in-out 2s infinite ease-in-out;
+  }
+  
+  .loader-text {
+    font-weight: bold;
+    animation: color-change 2s infinite ease-in-out;
+  }
+  
+  /* Zoom in and out animation */
+  @keyframes zoom-in-out {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  
+  /* Smooth color transition for the "S" text */
+  @keyframes color-change {
+    0%, 100% {
+      fill: #00ff99; /* Light mode color */
+    }
+    50% {
+      fill: #0077ff; /* Dark mode color */
+    }
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode .loader-container {
+    --bg-color: #1a202c; /* Dark background color */
+    color: #ffffff; /* White text for dark mode */
+  }
+  
+  /* Light mode styles */
+  body.light-mode .loader-container {
+    --bg-color: #ffffff; /* Light background color */
+    color: #1a202c; /* Dark text for light mode */
+  }
+  
