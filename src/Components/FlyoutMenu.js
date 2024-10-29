@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaBlog, FaBook, FaHome, FaSignInAlt, FaSignOutAlt } from 'react-icons/fa'; // Import relevant icons
+import { FaBlog, FaBook, FaHome } from 'react-icons/fa'; // Import relevant icons
 import { FaTimes } from 'react-icons/fa'; // Close button
 
 const FlyoutMenu = ({ setMenuOpen }) => {
