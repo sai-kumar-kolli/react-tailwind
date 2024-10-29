@@ -3,7 +3,6 @@ import "./styles.css";
 import Home from "./Components/Home";
 
 export default function App() {
-  console.log("App");
   return (
     <>
       <Routes>

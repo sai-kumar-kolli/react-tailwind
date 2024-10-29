@@ -173,7 +173,6 @@ const MainContent = () => {
                                 {/* Experience Items */}
                                 <div className="space-y-12 relative z-10">
                                     {experiences
-                                        .reverse()
                                         .map((experience, index, arr) => (
                                             <div
                                                 key={index}
