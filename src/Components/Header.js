@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import DarkModeToggle from './Darkmodetoggle';
-import { FaBars, FaTimes, FaHome, FaBlog, FaBook} from 'react-icons/fa';
+import { FaBars, FaTimes, FaHome, FaBlog, FaBook } from 'react-icons/fa';
 import FlyoutMenu from './FlyoutMenu';
 import LogoSVG from '../assets/logo';
 
@@ -57,7 +57,7 @@ const Header = () => {
 
 
             {/* Flyout Menu for Mobile */}
-            {menuOpen && <FlyoutMenu setMenuOpen={setMenuOpen} handleLogin={handleLogin} />}
+            {menuOpen && <FlyoutMenu setMenuOpen={setMenuOpen} />}
         </nav>
     );
 };
