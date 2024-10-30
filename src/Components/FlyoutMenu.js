@@ -21,7 +21,7 @@ const FlyoutMenu = ({ setMenuOpen }) => {
                 </div>
 
                 {/* Blog Menu Item */}
-                <div className="border-b pb-2 hover:text-blue-400 dark:hover:dark:text-teal-400 cursor-pointer flex justify-between items-center">
+                <div className="border-b pb-2 hover:text-blue-400 dark:hover:dark:text-teal-400 pointer-events-none flex justify-between items-center">
                     <span>Blog</span>
                     <FaBlog className=" dark:text-gray-100 text-gray-600" />
                 </div>

@@ -40,7 +40,7 @@ const Header = () => {
             {/* Right side contents (Blog, Samples, etc.) on Desktop */}
             <div className="md:flex ml-auto space-x-6 items-center">
                 <div className='hidden md:flex ml-auto space-x-6 items-center'>
-                    <div className="flex items-center space-x-2 hover:text-blue-400 dark:hover:dark:text-teal-400 cursor-pointer">
+                    <div className="flex items-center space-x-2 hover:text-blue-400 dark:hover:dark:text-teal-400 pointer-events-none" >
                         <FaBlog className=" dark:text-gray-100 text-gray-600" />
                         <span>Blog</span>
                     </div>

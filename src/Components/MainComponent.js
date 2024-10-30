@@ -22,13 +22,13 @@ const MainContent = () => {
     // Refs for each section
     const aboutRef = useRef(null);
     const experienceRef = useRef(null);
-    // const projectsRef = useRef(null);
+    const projectsRef = useRef(null);
 
     useEffect(() => {
         const sections = [
             { name: 'about', ref: aboutRef },
             { name: 'experience', ref: experienceRef },
-            // { name: 'projects', ref: projectsRef },
+            { name: 'projects', ref: projectsRef },
         ];
         const observer = new IntersectionObserver(
             (entries) => {
@@ -38,7 +38,7 @@ const MainContent = () => {
                     }
                 });
             },
-            { threshold: 0.6 } // Adjust as needed
+            { threshold: 0.5 } // Adjust as needed
         );
 
         sections.forEach(({ ref }) => {
@@ -72,13 +72,15 @@ const MainContent = () => {
                             <ul class="ml-1 mt-8 flex justify-center lg:justify-start space-x-5" aria-label="Social media">
                                 <li class="text-xs shrink-0">
                                     <a class="block hover:text-gray-800 dark:hover:text-gray-100" href="https://github.com/sai-kumar-kolli" target="_blank" rel="noreferrer noopener" aria-label="GitHub (opens in a new tab)" title="GitHub">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-6 w-6">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-6 w-6 text-gray-800 dark:text-gray-100">
+                                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.1 0 0 .67-.21 2.2.82a7.54 7.54 0 012.01-.27c.68 0 1.36.09 2.01.27 1.52-1.04 2.2-.82 2.2-.82.44 1.09.16 1.9.08 2.1.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.64 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z" />
                                         </svg>
                                     </a>
                                 </li>
                                 <li class="text-xs shrink-0">
-                                    <a class="block hover:text-gray-800 dark:hover:text-gray-100" href="https://www.linkedin.com/in/sai-kumar-kolli/" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn (opens in a new tab)" title="LinkedIn">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+                                    <a class="block hover:text-gray-800 dark:hover:text-gray-100" href="https://linkedin.com/in/sai-kumar-k-140385312" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn (opens in a new tab)" title="LinkedIn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6 text-gray-800 dark:text-gray-100">
+                                            <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.78-1.75-1.73s.78-1.73 1.75-1.73 1.75.78 1.75 1.73-.78 1.73-1.75 1.73zm13.5 11.27h-3v-5.6c0-1.3-.03-2.98-1.82-2.98-1.82 0-2.1 1.42-2.1 2.88v5.7h-3v-10h2.88v1.37h.04c.4-.76 1.38-1.57 2.84-1.57 3.04 0 3.6 2 3.6 4.6v5.6z" />
                                         </svg>
                                     </a>
                                 </li>
@@ -160,7 +162,7 @@ const MainContent = () => {
                             </div>
                         </section>
 
-                        <section ref={experienceRef} id="experience" className="py-8 lg:py-12 text-gray-500 dark:text-gray-400 transition-colors duration-300">
+                        <section ref={experienceRef} id="experience" className="py-8 mb-8 lg:py-12 text-gray-500 dark:text-gray-400 transition-colors duration-300">
                             <div class="sticky top-0 z-20 -mx-6 w-screen bg-slate-100 dark:bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
                                 <h2 class="text-sm font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 lg:sr-only">Experience</h2>
                             </div>
@@ -209,6 +211,69 @@ const MainContent = () => {
 
                                             </div>
                                         ))}
+                                </div>
+                            </div>
+                        </section>
+
+                        <section ref={projectsRef} id="projects" className="py-8 lg:py-12 text-gray-500 dark:text-gray-400 transition-colors duration-300">
+                            <div className="sticky top-0 z-20 -mx-6 w-screen bg-slate-100 dark:bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+                                <h2 className="text-sm font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 lg:sr-only">
+                                    Projects
+                                </h2>
+                            </div>
+
+                            <div className="container mx-auto space-y-12 my-6">
+                                {/* Project 1 */}
+                                <div className="group relative p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl">
+                                    <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 transition-colors duration-300">
+                                        CollabSync
+                                    </h3>
+                                    <p className="mt-2 text-gray-600 dark:text-gray-400 transition-colors duration-300">
+                                        Real-time collaborative code editor designed for seamless document sharing, live coding sessions, and interview practice.
+                                        Equipped with WebSocket integration, It allows multiple users to edit the same document simultaneously, providing an interactive and dynamic workspace ideal for tech interviews, peer coding, and project collaboration.
+                                    </p>
+                                    <div className="mt-4 flex space-x-2 text-sm">
+                                        <span className="px-2 py-1 bg-teal-500 text-white rounded-full">React</span>
+                                        <span className="px-2 py-1 bg-blue-500 text-white rounded-full">Node.js</span>
+                                        <span className="px-2 py-1 bg-gray-500 text-white rounded-full">Socket.IO</span>
+                                    </div>
+                                    <div className="mt-6 flex justify-between items-center">
+                                        <a
+                                            href="https://github.com/sai-kumar-kolli/collabsync"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-500 dark:text-teal-400 font-medium hover:underline transition-colors duration-300"
+                                        >
+                                            View Code
+                                        </a>
+                                        <a
+                                            href="https://collabsync-yywi.onrender.com"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-500 dark:text-teal-400 font-medium hover:underline transition-colors duration-300"
+                                        >
+                                            Live Demo
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="container mx-auto space-y-12">
+                                <div className="group relative p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl">
+                                    <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+                                        DevOps Visualized <span className="text-sm text-blue-500 dark:text-teal-500">(In Progress)</span>
+                                    </h3>
+                                    <p className="mt-2 text-gray-600 dark:text-gray-400">
+                                        An ongoing project aimed at creating a comprehensive visualization tool for DevOps processes. This project focuses on simplifying complex CI/CD workflows, infrastructure monitoring, and real-time deployment insights to provide an intuitive and visual approach for managing DevOps pipelines.
+                                    </p>
+                                    <p className="mt-4 text-gray-600 dark:text-gray-400">
+                                        The idea is to bridge the gap between DevOps engineering and non-technical stakeholders by providing clear, graphical representations of deployment processes, cloud resource allocations, and pipeline statuses, ensuring seamless communication and better project alignment.
+                                    </p>
+                                    <div className="mt-4 flex space-x-2 text-sm">
+                                        <span className="px-2 py-1 bg-teal-500 text-white rounded-full">React.js</span>
+                                        <span className="px-2 py-1 bg-blue-500 text-white rounded-full">Node.js</span>
+                                        <span className="px-2 py-1 bg-blue-500 text-white rounded-full">Docker</span>
+                                        <span className="px-2 py-1 bg-gray-500 text-white rounded-full">Kubernetes</span>
+                                    </div>
                                 </div>
                             </div>
                         </section>
