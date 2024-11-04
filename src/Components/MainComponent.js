@@ -260,7 +260,7 @@ const MainContent = () => {
                             <div className="container mx-auto space-y-12 my-6">
                                 <div className="group relative p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl">
                                     <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 transition-colors duration-300">
-                                        DevOps Visualized <span className="text-sm text-blue-500 dark:text-teal-500">(In Progress)</span>
+                                        DevOps Visualized 
                                     </h3>
                                     <p className="mt-2 text-gray-600 dark:text-gray-400 transition-colors duration-300">
                                         An ongoing project aimed at creating a comprehensive visualization tool for DevOps processes. This project focuses on simplifying complex CI/CD workflows, infrastructure monitoring, and real-time deployment insights to provide an intuitive and visual approach for managing DevOps pipelines.
