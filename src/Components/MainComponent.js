@@ -138,7 +138,7 @@ const MainContent = () => {
                     </section>
                     <main id="content" class="pt-8 sm:pt-24 lg:w-1/2 lg:py-24 text-gray-500 dark:text-gray-400 transition-colors duration-300">
                         <section ref={aboutRef} id="about" class="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24" aria-label="About me">
-                            <div class="sticky top-0 z-20 -ml-6 mb-4 w-screen bg-gray-100 dark:bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+                            <div class="sticky top-0 z-20 mb-4  bg-gray-100 dark:bg-slate-900/75 px-6 py-5 backdrop-blur md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0" style={{ backgroundColor: 'inherit', paddingLeft: '0px' }}>
                                 <h2 class="text-sm font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 lg:sr-only">About</h2>
                             </div>
                             <div>
@@ -163,7 +163,7 @@ const MainContent = () => {
                         </section>
 
                         <section ref={experienceRef} id="experience" className="py-8 mb-8 lg:py-12 text-gray-500 dark:text-gray-400 transition-colors duration-300">
-                            <div class="sticky top-0 z-20 -mx-6 w-screen bg-slate-100 dark:bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+                            <div class="sticky top-0 z-20  bg-slate-100 dark:bg-slate-900/75 px-6 py-5 backdrop-blur md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0" style={{ backgroundColor: 'inherit', paddingLeft: '0px' }}>
                                 <h2 class="text-sm font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 lg:sr-only">Experience</h2>
                             </div>
                             <div className="container mx-auto relative">
@@ -216,7 +216,7 @@ const MainContent = () => {
                         </section>
 
                         <section ref={projectsRef} id="projects" className="py-8 lg:py-12 text-gray-500 dark:text-gray-400 transition-colors duration-300">
-                            <div className="sticky top-0 z-20 -mx-6 w-screen bg-slate-100 dark:bg-slate-900/75 px-6 py-5 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0">
+                            <div className="sticky top-0 z-20  bg-slate-100 dark:bg-slate-900/75 px-6 py-5 backdrop-blur  md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0" style={{ backgroundColor: 'inherit', paddingLeft: '0px' }}>
                                 <h2 className="text-sm font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400 lg:sr-only">
                                     Projects
                                 </h2>
@@ -257,15 +257,15 @@ const MainContent = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="container mx-auto space-y-12">
+                            <div className="container mx-auto space-y-12 my-6">
                                 <div className="group relative p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105 hover:shadow-2xl">
-                                    <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200">
+                                    <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 transition-colors duration-300">
                                         DevOps Visualized <span className="text-sm text-blue-500 dark:text-teal-500">(In Progress)</span>
                                     </h3>
-                                    <p className="mt-2 text-gray-600 dark:text-gray-400">
+                                    <p className="mt-2 text-gray-600 dark:text-gray-400 transition-colors duration-300">
                                         An ongoing project aimed at creating a comprehensive visualization tool for DevOps processes. This project focuses on simplifying complex CI/CD workflows, infrastructure monitoring, and real-time deployment insights to provide an intuitive and visual approach for managing DevOps pipelines.
                                     </p>
-                                    <p className="mt-4 text-gray-600 dark:text-gray-400">
+                                    <p className="mt-4 text-gray-600 dark:text-gray-400 transition-colors duration-300">
                                         The idea is to bridge the gap between DevOps engineering and non-technical stakeholders by providing clear, graphical representations of deployment processes, cloud resource allocations, and pipeline statuses, ensuring seamless communication and better project alignment.
                                     </p>
                                     <div className="mt-4 flex space-x-2 text-sm">
