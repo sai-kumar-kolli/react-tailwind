@@ -1,0 +1,316 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  /* Makes this container a flex container */
+  gap: 10px;
+  /* Adds space between items */
+}
+
+.item {
+  background-color: lightblue;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.container-center {
+  display: flex;
+  justify-content: center;
+  /* Centers items horizontally */
+  align-items: center;
+  /* Centers items vertically */
+  height: 300px;
+  background-color: #f0f0f0;
+}
+
+.item {
+  padding: 20px;
+  background-color: lightcoral;
+  color: white;
+}
+
+.container-column {
+  display: flex;
+  flex-direction: column;
+  /* Places items in a column instead of a row */
+  gap: 10px;
+}
+
+.item {
+  background-color: lightgreen;
+  padding: 20px;
+}
+
+.container-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allows items to wrap onto new lines */
+  gap: 10px;
+}
+
+.item {
+  width: 150px;
+  /* Each item takes up 150px of space */
+  padding: 20px;
+  background-color: lightblue;
+  text-align: center;
+}
+
+.container-grow-shrink {
+  display: flex;
+  gap: 10px;
+}
+
+.item-grow {
+  flex-grow: 1;
+  /* All items grow equally to fill space */
+  padding: 20px;
+  background-color: lightgreen;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  /* Logo on the left, links on the right */
+  align-items: center;
+  /* Center items vertically */
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.container-flex-basis {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex-basis: 30%;
+  /* Each card takes up 30% of the container */
+  padding: 20px;
+  background-color: lightyellow;
+  border: 1px solid #ccc;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  /* Each column has a fixed width of 100px */
+  grid-template-rows: 100px 100px 100px;
+  /* Each row has a fixed height of 100px */
+  gap: 10px;
+  /* Space between grid items */
+  justify-content: center;
+  /* Center the entire grid horizontally */
+  align-content: center;
+  /* Center the entire grid vertically */
+  width: fit-content;
+  /* Shrinks the container to fit the content */
+  height: fit-content;
+  /* Shrinks the container to fit the content */
+  margin: 0 auto;
+  /* Centers the grid container itself in the viewport */
+  background-color: #f0f0f0;
+  /* Optional: to visualize grid area */
+}
+
+.box {
+  background-color: lightblue;
+  text-align: center;
+  line-height: 100px;
+  /* Centers text vertically in each box */
+  border: 1px solid #000;
+  /* To visually differentiate the boxes */
+}
+
+.box1 {
+  grid-column: 1;
+  /* First column */
+  grid-row: 1;
+  /* First row */
+}
+
+.box2 {
+  grid-column: 2;
+  /* Second column */
+  grid-row: 2;
+  /* Second row */
+}
+
+.box3 {
+  grid-column: 3;
+  /* Third column */
+  grid-row: 3;
+  /* Third row */
+}
+
+.containerr {
+  position: relative;
+  height: 100px;
+  overflow: auto;
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.static {
+  position: static;
+  background-color: lightgray;
+  padding: 10px;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+.relativee {
+  position: relative;
+  top: 20px;
+  left: 10px;
+  background-color: lightblue;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.absolutee {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  height: 120px;
+  background-color: lightgreen;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: lightcoral;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: lightyellow;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animated-box {
+  width: 200px;
+  padding: 20px;
+  background-color: lightblue;
+  animation-name: slideIn;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+/* Animation Keyframes */
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Card Container */
+.card {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+  /* Transition for hover effect */
+}
+
+/* Content */
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: bounce 2s;
+  /* Bouncing animation */
+}
+
+/* Hover Effect */
+.card:hover {
+  transform: scale(1.1);
+  /* Enlarges the card on hover */
+}
+
+/* Triangle side 1 */
+.triangle-side1,
+.triangle-side2,
+.triangle-side3 {
+  position: absolute;
+  width: 100px;
+  /* Half of the container width */
+  height: 2px;
+  /* Line thickness */
+  background-color: black;
+  /* Line color */
+}
+
+/* First side - horizontal at the bottom */
+.triangle-side1 {
+  bottom: 0;
+  left: 50%;
+}
+
+/* Second side - left diagonal */
+.triangle-side2 {
+  bottom: 0;
+  left: 50%;
+  transform-origin: bottom left;
+  transform: rotate(-60deg);
+}
+
+/* Third side - right diagonal */
+.triangle-side3 {
+  bottom: 0;
+  right: 0;
+  transform-origin: bottom right;
+  transform: rotate(60deg);
+}
+
+.triangle-container {
+  position: relative;
+  width: 200px;
+  /* Width of the container */
+  height: 200px;
+  /* Height of the container */
+}
