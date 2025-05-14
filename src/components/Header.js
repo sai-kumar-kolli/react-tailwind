@@ -44,7 +44,7 @@ const Header = () => {
                         <FaBlog className=" dark:text-gray-100 text-gray-600" />
                         <span>Blog</span>
                     </div>
-                    <div className="flex items-center space-x-2 hover:text-blue-400 dark:hover:dark:text-teal-400 cursor-pointer">
+                    <div className="flex items-center space-x-2 hover:text-blue-400 dark:hover:dark:text-teal-400 pointer-events-none">
                         <FaBook className=" dark:text-gray-100 text-gray-600" />
                         <span>Samples</span>
                     </div>
