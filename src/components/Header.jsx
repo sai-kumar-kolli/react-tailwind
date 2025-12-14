@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import DarkModeToggle from './Darkmodetoggle';
+import DarkModeToggle from './Darkmodetoggle.jsx';
 import { FaBars, FaTimes, FaHome, FaBlog, FaBook } from 'react-icons/fa';
-import FlyoutMenu from './FlyoutMenu';
-import LogoSVG from '../assets/logo';
+import FlyoutMenu from './FlyoutMenu.jsx';
+import LogoSVG from '../assets/logo.jsx';
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
