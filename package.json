@@ -6,6 +6,7 @@
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^2.11.0",
+    "@craco/craco": "^7.1.0",
     "axios": "^1.13.2",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
@@ -15,9 +16,9 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "browserslist": [
@@ -27,6 +28,9 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
     "tailwindcss": "^4.1.18"
   }
 }
